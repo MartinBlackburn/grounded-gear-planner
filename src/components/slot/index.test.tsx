@@ -8,7 +8,7 @@ import { Slot as SlotType } from "../../types/slots";
 import Slot from "./";
 
 test("renders learn react link", () => {
-    const { asFragment } = render(<Slot type={SlotType.MAINHAND} />);
+    const { asFragment } = render(<Slot onClick={jest.fn()} type={SlotType.MAINHAND} />);
 
     expect(asFragment()).toMatchSnapshot();
 });
