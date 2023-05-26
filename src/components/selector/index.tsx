@@ -1,16 +1,25 @@
 // libraries
 import React from "react";
 
+// state
+import { useSelector } from "react-redux";
+import { IState } from "../../state/store";
+
 // styles
 import "./index.css";
 
-function Slot() {
+const Selector = () => {
+    const selectedSlot = useSelector((state: IState) => state.selectedSlot);
+
+    if (!selectedSlot) {
+        return null;
+    }
+
     return (
-        <div className="slot">
-            <div>Name</div>
-            <div>Image</div>
+        <div className="selector">
+            <div>{selectedSlot}</div>
         </div>
     );
-}
+};
 
-export default Slot;
+export default Selector;

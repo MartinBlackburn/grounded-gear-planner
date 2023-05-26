@@ -2,7 +2,7 @@
 import { AnyAction } from "@reduxjs/toolkit";
 
 //types
-import Slot from "../../types/slots";
+import { Slot } from "../../types/slots";
 
 // action types
 export enum ActionTypes {
