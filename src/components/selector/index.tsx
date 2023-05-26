@@ -37,7 +37,10 @@ const Selector = () => {
                         key={index}
                         type={selectedSlot}
                         item={item}
-                        onClick={() => dispatch(Actions.closeSelector())}
+                        onClick={() => {
+                            dispatch(Actions.closeSelector());
+                            dispatch(Actions.selectTrinket(item));
+                        }}
                     />
                 ))}
             </div>

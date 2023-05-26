@@ -8,14 +8,17 @@ import { Slot as SlotType } from "../../types/slots";
 import Slot from "../slot";
 
 // state
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // styles
 import "./index.css";
 import { Actions } from "../../state/actions";
+import { IState } from "../../state/store";
 
 const Doll = () => {
     const dispatch = useDispatch();
+
+    const selectedTrinket = useSelector((state: IState) => state.trinket);
 
     return (
         <div className="doll">
@@ -28,7 +31,11 @@ const Doll = () => {
             </div>
 
             <div className="doll__trinket">
-                <Slot type={SlotType.TRINKET} onClick={() => dispatch(Actions.openSelector(SlotType.TRINKET))} />
+                <Slot
+                    type={SlotType.TRINKET}
+                    item={selectedTrinket}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.TRINKET))}
+                />
             </div>
 
             <div className="doll__head">

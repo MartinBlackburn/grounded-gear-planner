@@ -1,21 +1,19 @@
 // libraries
 import { Reducer } from "@reduxjs/toolkit";
+import { ITrinket } from "../../types/trinket";
 
 // types
 import { ActionTypes, Actions } from "../actions";
 
-interface IState {
-    item: string;
-}
+const INITIAL_STATE = null;
 
-const INITIAL_STATE: IState = {
-    item: "main hand",
-};
-
-const reducer: Reducer<IState, Actions> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<ITrinket | null, Actions> = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case ActionTypes.RESET:
             return INITIAL_STATE;
+
+        case ActionTypes.SELECT_TRINKET:
+            return action.payload;
 
         default:
             return state;

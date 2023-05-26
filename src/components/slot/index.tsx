@@ -11,7 +11,7 @@ import "./index.css";
 interface IProps {
     type: SlotType;
     onClick: () => void;
-    item?: ITrinket;
+    item?: ITrinket | null;
 }
 
 const Slot = (props: IProps) => {

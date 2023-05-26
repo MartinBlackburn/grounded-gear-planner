@@ -3,12 +3,14 @@ import { AnyAction } from "@reduxjs/toolkit";
 
 //types
 import { Slot } from "../../types/slots";
+import { ITrinket } from "../../types/trinket";
 
 // action types
 export enum ActionTypes {
     RESET = "RESET",
     OPEN_SELECTOR = "OPEN_SELECTOR",
     CLOSE_SELECTOR = "CLOSE_SELECTOR",
+    SELECT_TRINKET = "SELECT_TRINKET",
 }
 
 export interface IAction<ActionType, Payload> extends AnyAction {
@@ -40,5 +42,10 @@ export const Actions = {
     closeSelector: (): IAction<ActionTypes.CLOSE_SELECTOR, void> => ({
         type: ActionTypes.CLOSE_SELECTOR,
         payload: undefined,
+    }),
+
+    selectTrinket: (trinket: ITrinket): IAction<ActionTypes.SELECT_TRINKET, ITrinket> => ({
+        type: ActionTypes.SELECT_TRINKET,
+        payload: trinket,
     }),
 };
