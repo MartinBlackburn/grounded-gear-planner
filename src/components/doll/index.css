@@ -1,0 +1,16 @@
+.doll {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    width: 442px;
+    height: 632px;
+
+    background-image: url("./hoops.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    cursor: pointer;
+}

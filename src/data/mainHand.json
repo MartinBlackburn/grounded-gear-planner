@@ -1,0 +1,14 @@
+[
+    {
+        "name": "club",
+        "image": "/images/club.png",
+        "effects": [
+            {
+                "name": "cutman",
+                "description": "does damage over time",
+                "amount": 5,
+                "unit": "%"
+            }
+        ]
+    }
+]
