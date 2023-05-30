@@ -5,15 +5,21 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { Actions } from "../actions";
 
 // reducers
-import trinket from "./trinket";
 import mainHand from "./mainHand";
 import offhand from "./offhand";
+import trinket from "./trinket";
+import head from "./head";
+import body from "./body";
+import legs from "./legs";
 import selectedSlot from "./selectedSlot";
 
 export const rootReducer = combineReducers({
-    offhand: offhand,
     mainHand: mainHand,
+    offhand: offhand,
     trinket: trinket,
+    head: head,
+    body: body,
+    legs: legs,
     selectedSlot: selectedSlot,
 });
 

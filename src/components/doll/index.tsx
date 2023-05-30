@@ -22,6 +22,10 @@ const Doll = () => {
     const selectedOffhand = useSelector((state: IState) => state.offhand);
     const selectedTrinket = useSelector((state: IState) => state.trinket);
 
+    const selectedHead = useSelector((state: IState) => state.head);
+    const selectedBody = useSelector((state: IState) => state.body);
+    const selectedLegs = useSelector((state: IState) => state.legs);
+
     return (
         <div className="doll">
             <div className="doll__mainHand">
@@ -49,15 +53,27 @@ const Doll = () => {
             </div>
 
             <div className="doll__head">
-                <Slot type={SlotType.HEAD} onClick={() => dispatch(Actions.openSelector(SlotType.HEAD))} />
+                <Slot
+                    type={SlotType.HEAD}
+                    item={selectedHead}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.HEAD))}
+                />
             </div>
 
             <div className="doll__body">
-                <Slot type={SlotType.BODY} onClick={() => dispatch(Actions.openSelector(SlotType.BODY))} />
+                <Slot
+                    type={SlotType.BODY}
+                    item={selectedBody}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.BODY))}
+                />
             </div>
 
             <div className="doll__legs">
-                <Slot type={SlotType.LEGS} onClick={() => dispatch(Actions.openSelector(SlotType.LEGS))} />
+                <Slot
+                    type={SlotType.LEGS}
+                    item={selectedLegs}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.LEGS))}
+                />
             </div>
         </div>
     );

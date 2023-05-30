@@ -16,10 +16,11 @@ import Slot from "../slot";
 import { Slot as SlotType } from "../../types/slots";
 import { ITrinket } from "../../types/trinket";
 import { IMainHand } from "../../types/mainHand";
+import { IOffhand } from "../../types/offhand";
+import { IArmour } from "../../types/armour";
 
 // styles
 import "./index.css";
-import { IOffhand } from "../../types/offhand";
 
 const Selector = () => {
     const selectedSlot = useSelector((state: IState) => state.selectedSlot);
@@ -42,6 +43,18 @@ const Selector = () => {
 
         if (selectedSlot === SlotType.OFFHAND) {
             dispatch(Actions.selectOffhand(item as IOffhand));
+        }
+
+        if (selectedSlot === SlotType.HEAD) {
+            dispatch(Actions.selectHead(item as IArmour));
+        }
+
+        if (selectedSlot === SlotType.BODY) {
+            dispatch(Actions.selectBody(item as IArmour));
+        }
+
+        if (selectedSlot === SlotType.LEGS) {
+            dispatch(Actions.selectLegs(item as IArmour));
         }
 
         dispatch(Actions.closeSelector());

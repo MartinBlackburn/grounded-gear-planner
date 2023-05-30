@@ -1,0 +1,47 @@
+// types
+import { IArmour } from "../types/armour";
+
+export const Head: IArmour[] = [
+    {
+        name: "Clover Hood",
+        description: "A thin hood crafted from clovers and plant fiber.",
+        sleekEffect: {
+            name: "Trickle regen",
+            description: "Regenerates 0.35 of the players health every 5 seconds.",
+            amount: 0.35,
+            unit: undefined,
+        },
+        setEffect: {
+            name: "Moist",
+            description: "Reduces thirst drain rate by 25%.",
+            amount: 25,
+            unit: "%",
+        },
+        effects: [
+            {
+                name: "Defense",
+                description: "Reduces incoming damage",
+                amount: 3,
+                unit: undefined,
+            },
+            {
+                name: "Resistance",
+                description: "Reduces incoming damage",
+                amount: 2.5,
+                unit: "%",
+            },
+            {
+                name: "Stamina usage",
+                description: "Increases the amount of stamina used",
+                amount: 1.25,
+                unit: "%",
+            },
+            {
+                name: "Fuller",
+                description: "Reduces hunger drain rate by 5%",
+                amount: 5,
+                unit: "%",
+            },
+        ],
+    },
+];

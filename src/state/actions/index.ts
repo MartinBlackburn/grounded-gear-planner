@@ -1,11 +1,12 @@
 // libraries
 import { AnyAction } from "@reduxjs/toolkit";
-import { IMainHand } from "../../types/mainHand";
-import { IOffhand } from "../../types/offhand";
 
 //types
 import { Slot } from "../../types/slots";
+import { IMainHand } from "../../types/mainHand";
+import { IOffhand } from "../../types/offhand";
 import { ITrinket } from "../../types/trinket";
+import { IArmour } from "../../types/armour";
 
 // action types
 export enum ActionTypes {
@@ -15,6 +16,9 @@ export enum ActionTypes {
     SELECT_MAINHAND = "SELECT_MAINHAND",
     SELECT_OFFHAND = "SELECT_OFFHAND",
     SELECT_TRINKET = "SELECT_TRINKET",
+    SELECT_HEAD = "SELECT_HEAD",
+    SELECT_BODY = "SELECT_BODY",
+    SELECT_LEGS = "SELECT_LEGS",
 }
 
 export interface IAction<ActionType, Payload> extends AnyAction {
@@ -60,6 +64,21 @@ export const Actions = {
 
     selectOffhand: (item: IOffhand): IAction<ActionTypes.SELECT_OFFHAND, IOffhand> => ({
         type: ActionTypes.SELECT_OFFHAND,
+        payload: item,
+    }),
+
+    selectHead: (item: IArmour): IAction<ActionTypes.SELECT_HEAD, IArmour> => ({
+        type: ActionTypes.SELECT_HEAD,
+        payload: item,
+    }),
+
+    selectBody: (item: IArmour): IAction<ActionTypes.SELECT_BODY, IArmour> => ({
+        type: ActionTypes.SELECT_BODY,
+        payload: item,
+    }),
+
+    selectLegs: (item: IArmour): IAction<ActionTypes.SELECT_LEGS, IArmour> => ({
+        type: ActionTypes.SELECT_LEGS,
         payload: item,
     }),
 };
