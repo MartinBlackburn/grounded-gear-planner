@@ -15,8 +15,8 @@ const Effects = () => {
         <div className="effects">
             {selectedTrinket?.effects.map((effect, index) => {
                 return (
-                    <div key={index}>
-                        <div>{effect.name}</div>
+                    <div className="effect" key={index}>
+                        <div className="effect__name">{effect.name}</div>
                         <div>{effect.description}</div>
                     </div>
                 );
