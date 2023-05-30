@@ -1,6 +1,8 @@
 .slot {
     display: flex;
     flex-direction: column;
+
+    cursor: pointer;
 }
 
 .slot__name {

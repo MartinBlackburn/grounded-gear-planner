@@ -19,6 +19,7 @@ const Doll = () => {
     const dispatch = useDispatch();
 
     const selectedMainHand = useSelector((state: IState) => state.mainHand);
+    const selectedOffhand = useSelector((state: IState) => state.offhand);
     const selectedTrinket = useSelector((state: IState) => state.trinket);
 
     return (
@@ -32,7 +33,11 @@ const Doll = () => {
             </div>
 
             <div className="doll__offHand">
-                <Slot type={SlotType.OFFHAND} onClick={() => dispatch(Actions.openSelector(SlotType.OFFHAND))} />
+                <Slot
+                    type={SlotType.OFFHAND}
+                    item={selectedOffhand}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.OFFHAND))}
+                />
             </div>
 
             <div className="doll__trinket">

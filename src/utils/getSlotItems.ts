@@ -1,5 +1,6 @@
 // data
 import { MainHand } from "../data/mainHand";
+import { Offhand } from "../data/offhand";
 import { Trinkets } from "../data/trinkets";
 
 // types
@@ -12,6 +13,9 @@ export const getSlotItems = (slot: Slot) => {
 
         case Slot.MAINHAND:
             return MainHand;
+
+        case Slot.OFFHAND:
+            return Offhand;
 
         default:
             return [];

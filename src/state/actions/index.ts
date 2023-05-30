@@ -1,6 +1,7 @@
 // libraries
 import { AnyAction } from "@reduxjs/toolkit";
 import { IMainHand } from "../../types/mainHand";
+import { IOffhand } from "../../types/offhand";
 
 //types
 import { Slot } from "../../types/slots";
@@ -12,6 +13,7 @@ export enum ActionTypes {
     OPEN_SELECTOR = "OPEN_SELECTOR",
     CLOSE_SELECTOR = "CLOSE_SELECTOR",
     SELECT_MAINHAND = "SELECT_MAINHAND",
+    SELECT_OFFHAND = "SELECT_OFFHAND",
     SELECT_TRINKET = "SELECT_TRINKET",
 }
 
@@ -46,13 +48,18 @@ export const Actions = {
         payload: undefined,
     }),
 
-    selectTrinket: (trinket: ITrinket): IAction<ActionTypes.SELECT_TRINKET, ITrinket> => ({
+    selectTrinket: (item: ITrinket): IAction<ActionTypes.SELECT_TRINKET, ITrinket> => ({
         type: ActionTypes.SELECT_TRINKET,
-        payload: trinket,
+        payload: item,
     }),
 
-    selectMainHand: (mainHand: IMainHand): IAction<ActionTypes.SELECT_MAINHAND, IMainHand> => ({
+    selectMainHand: (item: IMainHand): IAction<ActionTypes.SELECT_MAINHAND, IMainHand> => ({
         type: ActionTypes.SELECT_MAINHAND,
-        payload: mainHand,
+        payload: item,
+    }),
+
+    selectOffhand: (item: IOffhand): IAction<ActionTypes.SELECT_OFFHAND, IOffhand> => ({
+        type: ActionTypes.SELECT_OFFHAND,
+        payload: item,
     }),
 };
