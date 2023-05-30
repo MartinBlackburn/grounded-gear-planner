@@ -3,14 +3,16 @@
     flex-direction: column;
     align-content: flex-start;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
 
     width: 442px;
-    height: 632px;
+    height: 692px;
 
     background-image: url("./hoops.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: top right;
 
     cursor: pointer;
 }

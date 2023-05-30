@@ -44,3 +44,7 @@
     top: 5px;
     right: 5px;
 }
+
+.selector .slot {
+    align-items: center;
+}
