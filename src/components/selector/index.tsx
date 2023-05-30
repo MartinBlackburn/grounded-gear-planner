@@ -12,6 +12,11 @@ import { getSlotItems } from "../../utils/getSlotItems";
 // components
 import Slot from "../slot";
 
+// types
+import { Slot as SlotType } from "../../types/slots";
+import { ITrinket } from "../../types/trinket";
+import { IMainHand } from "../../types/mainHand";
+
 // styles
 import "./index.css";
 
@@ -24,6 +29,18 @@ const Selector = () => {
     }
 
     const items = getSlotItems(selectedSlot);
+
+    const onClick = (item: IMainHand | ITrinket) => {
+        if (selectedSlot === SlotType.TRINKET) {
+            dispatch(Actions.selectTrinket(item));
+        }
+
+        if (selectedSlot === SlotType.MAINHAND) {
+            dispatch(Actions.selectMainHand(item as IMainHand));
+        }
+
+        dispatch(Actions.closeSelector());
+    };
 
     return (
         <div className="selector">
@@ -38,8 +55,7 @@ const Selector = () => {
                         type={selectedSlot}
                         item={item}
                         onClick={() => {
-                            dispatch(Actions.closeSelector());
-                            dispatch(Actions.selectTrinket(item));
+                            onClick(item);
                         }}
                     />
                 ))}

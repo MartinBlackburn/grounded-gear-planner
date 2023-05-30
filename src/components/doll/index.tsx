@@ -18,12 +18,17 @@ import { IState } from "../../state/store";
 const Doll = () => {
     const dispatch = useDispatch();
 
+    const selectedMainHand = useSelector((state: IState) => state.mainHand);
     const selectedTrinket = useSelector((state: IState) => state.trinket);
 
     return (
         <div className="doll">
             <div className="doll__mainHand">
-                <Slot type={SlotType.MAINHAND} onClick={() => dispatch(Actions.openSelector(SlotType.MAINHAND))} />
+                <Slot
+                    type={SlotType.MAINHAND}
+                    item={selectedMainHand}
+                    onClick={() => dispatch(Actions.openSelector(SlotType.MAINHAND))}
+                />
             </div>
 
             <div className="doll__offHand">
