@@ -7,7 +7,7 @@ export const Head: IArmour[] = [
         description: "A thin hood crafted from clovers and plant fiber.",
         sleekEffect: {
             name: "Trickle regen",
-            description: "Regenerates 0.35 of the players health every 5 seconds.",
+            description: "Regenerates the players health over time.",
             amount: 0.35,
             unit: undefined,
         },
@@ -38,7 +38,7 @@ export const Head: IArmour[] = [
             },
             {
                 name: "Fuller",
-                description: "Reduces hunger drain rate by 5%",
+                description: "Reduces hunger drain rate",
                 amount: 5,
                 unit: "%",
             },

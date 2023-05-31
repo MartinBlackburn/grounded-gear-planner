@@ -8,7 +8,7 @@ export const Offhand: IOffhand[] = [
         effects: [
             {
                 name: "Block strength",
-                description: "Increases block gauge by 25",
+                description: "Increases block gauge",
                 amount: 25,
                 unit: undefined,
             },

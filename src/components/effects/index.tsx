@@ -5,6 +5,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { IState } from "../../state/store";
 
+// utils
+import { combineEffects } from "../../utils/combineEffects";
+
 // styles
 import "./index.css";
 
@@ -17,57 +20,24 @@ const Effects = () => {
     const selectedBody = useSelector((state: IState) => state.body);
     const selectedLegs = useSelector((state: IState) => state.legs);
 
+    const combinedEffects = combineEffects({
+        mainHand: selectedMainHand,
+        offhand: selectedOffhand,
+        trinket: selectedTrinket,
+        head: selectedHead,
+        body: selectedBody,
+        legs: selectedLegs,
+    });
+
     return (
         <div className="effects">
-            {selectedTrinket?.effects.map((effect, index) => {
+            {combinedEffects.map((effect, index) => {
                 return (
                     <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
-                        <div>{effect.description}</div>
-                    </div>
-                );
-            })}
-
-            {selectedOffhand?.effects.map((effect, index) => {
-                return (
-                    <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
-                        <div>{effect.description}</div>
-                    </div>
-                );
-            })}
-
-            {selectedMainHand?.effects.map((effect, index) => {
-                return (
-                    <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
-                        <div>{effect.description}</div>
-                    </div>
-                );
-            })}
-
-            {selectedHead?.effects.map((effect, index) => {
-                return (
-                    <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
-                        <div>{effect.description}</div>
-                    </div>
-                );
-            })}
-
-            {selectedBody?.effects.map((effect, index) => {
-                return (
-                    <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
-                        <div>{effect.description}</div>
-                    </div>
-                );
-            })}
-
-            {selectedLegs?.effects.map((effect, index) => {
-                return (
-                    <div className="effect" key={index}>
-                        <div className="effect__name">{effect.name}</div>
+                        <div className="effect__name">
+                            {effect.name}: {effect.amount}
+                            {effect.unit}
+                        </div>
                         <div>{effect.description}</div>
                     </div>
                 );
