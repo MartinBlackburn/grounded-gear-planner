@@ -9,9 +9,6 @@ import { IState } from "../../state/store";
 // utils
 import { getSlotItems } from "../../utils/getSlotItems";
 
-// components
-import Slot from "../slot";
-
 // types
 import { Slot as SlotType } from "../../types/slots";
 import { ITrinket } from "../../types/trinket";
@@ -26,11 +23,27 @@ const Selector = () => {
     const selectedSlot = useSelector((state: IState) => state.selectedSlot);
     const dispatch = useDispatch();
 
+    const [searchTerm, setSearchTerm] = React.useState("");
+
     if (!selectedSlot) {
         return null;
     }
 
-    const items = getSlotItems(selectedSlot);
+    let items = getSlotItems(selectedSlot).sort((itemA, itemB) => {
+        if (itemA.name < itemB.name) {
+            return -1;
+        }
+
+        if (itemA.name > itemB.name) {
+            return 1;
+        }
+
+        return 0;
+    });
+
+    items = items.filter((item) => {
+        return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
     const onClick = (item: IMainHand | ITrinket | IOffhand) => {
         if (selectedSlot === SlotType.TRINKET) {
@@ -63,20 +76,37 @@ const Selector = () => {
     return (
         <div className="selector">
             <div className="selector__inner">
-                <div className="selector__close" onClick={() => dispatch(Actions.closeSelector())}>
+                <div
+                    className="selector__close"
+                    onClick={() => {
+                        dispatch(Actions.closeSelector());
+                        setSearchTerm("");
+                    }}
+                >
                     x
                 </div>
 
-                {items.map((item, index) => (
-                    <Slot
-                        key={index}
-                        type={selectedSlot}
-                        item={item}
-                        onClick={() => {
-                            onClick(item);
-                        }}
-                    />
-                ))}
+                <input
+                    type="text"
+                    placeholder="search..."
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm}
+                />
+
+                <div className="selector__items">
+                    {items.map((item, index) => (
+                        <div
+                            className="selector__item"
+                            key={index}
+                            onClick={() => {
+                                onClick(item);
+                                setSearchTerm("");
+                            }}
+                        >
+                            {item.name}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
