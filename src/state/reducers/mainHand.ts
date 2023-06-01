@@ -15,6 +15,13 @@ const reducer: Reducer<IMainHand | null, Actions> = (state = INITIAL_STATE, acti
         case ActionTypes.SELECT_MAINHAND:
             return action.payload;
 
+        case ActionTypes.SELECT_OFFHAND:
+            if (state?.twoHanded) {
+                return INITIAL_STATE;
+            }
+
+            return state;
+
         default:
             return state;
     }
