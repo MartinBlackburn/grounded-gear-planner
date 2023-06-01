@@ -1,6 +1,6 @@
 // data
 import { MainHand } from "../data/mainHand";
-import { Offhand } from "../data/offhand";
+import { Offhand } from "../data/offHand";
 import { Trinkets } from "../data/trinkets";
 import { Head } from "../data/head";
 import { Body } from "../data/body";
@@ -8,8 +8,9 @@ import { Legs } from "../data/legs";
 
 // types
 import { Slot } from "../types/slots";
+import { GearTypes } from "../types/types";
 
-export const getSlotItems = (slot: Slot) => {
+export const getSlotItems = (slot: Slot): GearTypes[] => {
     switch (slot) {
         case Slot.MAINHAND:
             return MainHand;

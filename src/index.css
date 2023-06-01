@@ -15,6 +15,11 @@ body {
     background-color: #dbddba;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .layout {
     display: flex;
     margin: 0 auto;

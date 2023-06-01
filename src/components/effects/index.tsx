@@ -35,7 +35,7 @@ const Effects = () => {
                 return (
                     <div className="effect" key={index}>
                         <div className="effect__name">
-                            {effect.name}: {effect.amount}
+                            {effect.name}: {effect.amount > 0 ? effect.amount : undefined}
                             {effect.unit}
                         </div>
                         <div>{effect.description}</div>

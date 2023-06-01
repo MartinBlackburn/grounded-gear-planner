@@ -91,6 +91,7 @@ const Selector = () => {
                     placeholder="search..."
                     onChange={(e) => setSearchTerm(e.target.value)}
                     value={searchTerm}
+                    autoFocus
                 />
 
                 <div className="selector__items">

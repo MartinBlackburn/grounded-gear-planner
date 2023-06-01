@@ -10,8 +10,9 @@
 }
 
 .slot__image {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
+    padding: 5px;
 
     background: #703302;
     border: 2px solid #340f0e;

@@ -4,4 +4,5 @@ export enum DamageType {
     SLASHING = "Slashing",
     STABBING = "Stabbing",
     GENERIC = "Generic",
+    DIGGING = "Digging",
 }
