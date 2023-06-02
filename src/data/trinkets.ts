@@ -370,4 +370,108 @@ export const Trinkets: ITrinket[] = [
             },
         ],
     },
+    {
+        name: "Everlasting hogstopper",
+        description: "A source of infinite food. A nibble now and then satiates your hunger in just the right amounts.",
+        image: "images/trinkets/everlastingHogstopper.webp",
+        effects: [
+            {
+                name: "Food generation",
+                description: "Passively fills the players food bar by 10 every minute.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Wondrous wormhole",
+        description: "A condensed nugget of elemental force. Simply holding it fills you with power.",
+        image: "images/trinkets/wondrousWormhole.webp",
+        effects: [
+            {
+                name: "Sour attack",
+                description: "Attacks inflict 15 extra Sour Damage. Doesn't apply to bows.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Fancy fletching",
+        description: "A mysterious feather that makes shooting arrows significantly less exhausting",
+        image: "images/trinkets/fancyFletching.webp",
+        effects: [
+            {
+                name: "Effortless arrows",
+                description: "Bow or crossbow attacks give a 5 second buff that reduces exhaustion recovery by 50%.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Fluffy dandelion tuft",
+        description:
+            "A fluffy puff of dandelion of exceptionally high quality. Could be used to drift down from even greater heights.",
+        image: "images/trinkets/fluffyDandelionTuft.webp",
+        effects: [],
+    },
+    {
+        name: "Fungal charm",
+        description: "A pretty growth of fungus that seems to want to protect you from harm.",
+        image: "images/trinkets/fungalCharm.webp",
+        effects: [
+            {
+                name: "Explosive Resist",
+                description: "Increases resistance to explosive damage by 75%.",
+                amount: 75,
+                unit: "%",
+            },
+        ],
+    },
+    {
+        name: "Hot cha charm",
+        description: "A condensed nugget of elemental force. Simply holding it fills you with power.",
+        image: "images/trinkets/hotChaCharm.webp",
+        effects: [
+            {
+                name: "Spicy attack",
+                description: "Attacks inflict 15 extra Spicy Damage. Doesn't apply to bows.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Shiny salt crystal",
+        description: "A condensed nugget of elemental force. Simply holding it fills you with power.",
+        image: "images/trinkets/shinySaltCrystal.webp",
+        effects: [
+            {
+                name: "Salty Attack",
+                description: "Attacks inflict 15 extra Salty Damage. Doesn't apply to bows.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Suspicious ice cap",
+        description: "A condensed nugget of elemental force. Simply holding it fills you with power.",
+        image: "images/trinkets/suspiciousIceCap.webp",
+        effects: [
+            {
+                name: "Fresh attack",
+                description: "Attacks inflict 15 extra Fresh Damage. Doesn't apply to bows.",
+                amount: 0,
+                unit: undefined,
+            },
+        ],
+    },
+    {
+        name: "Dandelion tuft",
+        description: "A fluffy puff of dandelion stuff. Could be used to drift down from great heights.",
+        image: "images/trinkets/dandelionTuft.webp",
+        effects: [],
+    },
 ];
