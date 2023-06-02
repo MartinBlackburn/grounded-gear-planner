@@ -1,5 +1,7 @@
 .effect {
     margin-bottom: 10px;
+
+    white-space: pre-wrap;
 }
 
 .effect__name {

@@ -3,6 +3,7 @@ import React from "react";
 
 // types
 import { Slot as SlotType } from "../../types/slots";
+import { IArmour } from "../../types/armour";
 import { IMainHand } from "../../types/mainHand";
 import { ITrinket } from "../../types/trinket";
 
@@ -12,7 +13,7 @@ import "./index.css";
 interface IProps {
     type: SlotType;
     onClick: () => void;
-    item?: ITrinket | IMainHand | null;
+    item?: ITrinket | IMainHand | IArmour | null;
 }
 
 const Slot = (props: IProps) => {
