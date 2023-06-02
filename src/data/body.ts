@@ -5,6 +5,7 @@ export const Body: IArmour[] = [
     {
         name: "Clover Poncho",
         description: "A breezy poncho crafted from clovers and plant fiber.",
+        image: "",
         sleekEffect: {
             name: "Trickle regen",
             description: "Regenerates the players health over time.",

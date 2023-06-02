@@ -5,6 +5,7 @@ export const Legs: IArmour[] = [
     {
         name: "Clover Shin Guards",
         description: "Thin, damp leg armor crafted from clovers and plant fiber.",
+        image: "",
         sleekEffect: {
             name: "Trickle regen",
             description: "Regenerates the players health over time.",

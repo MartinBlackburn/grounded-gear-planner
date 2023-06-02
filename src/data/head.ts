@@ -5,6 +5,7 @@ export const Head: IArmour[] = [
     {
         name: "Clover Hood",
         description: "A thin hood crafted from clovers and plant fiber.",
+        image: "",
         sleekEffect: {
             name: "Trickle regen",
             description: "Regenerates the players health over time.",
