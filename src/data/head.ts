@@ -41,7 +41,7 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Max Stamina", description: "", amount: 0, unit: undefined },
+            { name: "Max stamina", description: "Increases max stamina.", amount: 20, unit: undefined },
         ],
     },
     {
@@ -65,7 +65,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Hauling Strength", description: "", amount: 0, unit: undefined },
+            {
+                name: "Hauling strength",
+                description: "Increases the amount of Grass Planks and Weed Stems that can be carried at once by 3.",
+                amount: 3,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -83,7 +88,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
-            { name: "Major Threat", description: "", amount: 0, unit: undefined },
+            {
+                name: "Major threat",
+                description: "Increases creatures favorability of the player over other sources of aggression by 10%.",
+                amount: 10,
+                unit: "%",
+            },
         ],
     },
     {
@@ -106,7 +116,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Crit After Block", description: "", amount: 0, unit: undefined },
+            {
+                name: "Crit after block",
+                description:
+                    "Blocking an attack has a 50% chance to increase the chance for a crit to be performed by 1% for 15 seconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -130,7 +146,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Perfect Block", description: "", amount: 0, unit: undefined },
+            {
+                name: "Perfect block",
+                description: "Extends the perfect block timing window by 15 milliseconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -154,7 +175,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Hasty Regen", description: "", amount: 0, unit: undefined },
+            {
+                name: "Hasty regen",
+                description: "Lower exhaustion when running out of stamina by 5%.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -178,7 +204,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Bow Stun", description: "", amount: 0, unit: undefined },
+            {
+                name: "Bow stun",
+                description: "Has a 20% chance to inflict 3 stun when using bows or crossbows.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -202,7 +233,7 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
-            { name: "Block Strength", description: "", amount: 0, unit: undefined },
+            { name: "Block strength", description: "Increases block gauge.", amount: 25, unit: undefined },
         ],
     },
     {
@@ -227,7 +258,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Poison Coating", description: "", amount: 0, unit: undefined },
+            {
+                name: "Poison coating",
+                description:
+                    "All attacks have a 25% chance to apply a Poison effect dealing 16 damage every 5 seconds over 30 seconds. DoT damage does not stack per armor piece.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -252,7 +289,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Explosive Stun", description: "", amount: 0, unit: undefined },
+            {
+                name: "Explosive stun",
+                description: "Gives all explosive attacks 5 extra stun.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -276,7 +318,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Charged Shot Combo", description: "", amount: 0, unit: undefined },
+            {
+                name: "Charged shot combo",
+                description:
+                    "Uncharged bow attacks have a 30% chance to apply a 5 second buff that reduces the charged attack time of all sources by 25%.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -300,7 +348,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 4, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Ranged Cut", description: "", amount: 0, unit: undefined },
+            {
+                name: "Ranged cut",
+                description:
+                    "Ranged weapons have a 30% chance to inflict the Bleed effect, dealing 20 damage a second for 5 seconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -324,7 +378,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Poison Damage", description: "", amount: 0, unit: undefined },
+            {
+                name: "Poison damage",
+                description: "Increases damage of player-dealt poison attacks.",
+                amount: 20,
+                unit: "%",
+            },
         ],
     },
     {
@@ -347,7 +406,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Overbearing", description: "", amount: 0, unit: undefined },
+            {
+                name: "Overbearing",
+                description:
+                    "Performing a charge attack has a 33% chance to lower the damage of enemy attacks by 20% for 15 seconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -372,7 +437,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
-            { name: "Cutman", description: "", amount: 0, unit: undefined },
+            {
+                name: "Cutman",
+                description:
+                    "Critical hits have a 50% chance to inflict the Bleed effect, dealing 20 damage a second for 10 seconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -396,7 +467,13 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Corrosion", description: "", amount: 0, unit: undefined },
+            {
+                name: "Corrosion",
+                description:
+                    "Melee attacks have a 10% chance to debuff the enemy with acid, causing them to take 15% more damage for 10 seconds.",
+                amount: 0,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -420,7 +497,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
-            { name: "Block Stun", description: "", amount: 0, unit: undefined },
+            {
+                name: "Block stun",
+                description: "Increases enemy stun by 3 when blocking attacks.",
+                amount: 3,
+                unit: undefined,
+            },
         ],
     },
     {
@@ -439,7 +521,12 @@ export const Head: IArmour[] = [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
-            { name: "Sizzle Protection", description: "", amount: 0, unit: undefined },
+            {
+                name: "Sizzle protection",
+                description: "Increases sizzle resistance by 75%.",
+                amount: 75,
+                unit: "%",
+            },
         ],
     },
 ];
