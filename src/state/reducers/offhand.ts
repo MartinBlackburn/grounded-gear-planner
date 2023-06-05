@@ -13,9 +13,17 @@ const reducer: Reducer<IOffhand | null, Actions> = (state = INITIAL_STATE, actio
             return INITIAL_STATE;
 
         case ActionTypes.SELECT_OFFHAND:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             return action.payload;
 
         case ActionTypes.SELECT_MAINHAND:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             if (action.payload.twoHanded) {
                 return INITIAL_STATE;
             }

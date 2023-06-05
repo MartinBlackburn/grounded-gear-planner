@@ -45,7 +45,7 @@ const Selector = () => {
         return item.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
-    const onClick = (item: IMainHand | ITrinket | IOffhand) => {
+    const onClick = (item: IMainHand | ITrinket | IOffhand | null) => {
         if (selectedSlot === SlotType.TRINKET) {
             dispatch(Actions.selectTrinket(item as ITrinket));
         }
@@ -95,6 +95,16 @@ const Selector = () => {
                 />
 
                 <div className="selector__items">
+                    <div
+                        className="selector__item"
+                        onClick={() => {
+                            onClick(null);
+                            setSearchTerm("");
+                        }}
+                    >
+                        Nothing
+                    </div>
+
                     {items.map((item, index) => (
                         <div
                             className="selector__item"

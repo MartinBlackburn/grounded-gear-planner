@@ -13,6 +13,10 @@ const reducer: Reducer<IArmour | null, Actions> = (state = INITIAL_STATE, action
             return INITIAL_STATE;
 
         case ActionTypes.SELECT_BODY:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             return action.payload;
 
         default:

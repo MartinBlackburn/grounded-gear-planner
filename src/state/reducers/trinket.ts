@@ -13,6 +13,10 @@ const reducer: Reducer<ITrinket | null, Actions> = (state = INITIAL_STATE, actio
             return INITIAL_STATE;
 
         case ActionTypes.SELECT_TRINKET:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             return action.payload;
 
         default:

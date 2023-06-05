@@ -13,6 +13,10 @@ const reducer: Reducer<IMainHand | null, Actions> = (state = INITIAL_STATE, acti
             return INITIAL_STATE;
 
         case ActionTypes.SELECT_MAINHAND:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             return action.payload;
 
         case ActionTypes.SELECT_OFFHAND:

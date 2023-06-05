@@ -14,6 +14,10 @@ const reducer: Reducer<Slot | null, Actions> = (state = INITIAL_STATE, action) =
             return INITIAL_STATE;
 
         case ActionTypes.OPEN_SELECTOR:
+            if (action.payload === null) {
+                return INITIAL_STATE;
+            }
+
             return action.payload;
 
         default:
