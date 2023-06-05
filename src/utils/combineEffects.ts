@@ -58,5 +58,10 @@ export const combineEffects = ({ mainHand, offhand, trinket, head, body, legs }:
         addEffect(effect);
     });
 
+    // add set effect if set all the same type
+    if (head && head?.setEffect.name === body?.setEffect.name && body?.setEffect.name === legs?.setEffect.name) {
+        addEffect(head.setEffect);
+    }
+
     return effects;
 };
