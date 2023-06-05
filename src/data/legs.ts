@@ -16,7 +16,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Fuller", description: "Reduces hunger drain rate", amount: 5, unit: "%" },
         ],
     },
@@ -39,7 +39,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Max Stamina", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -63,7 +63,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Hauling Strength", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -81,7 +81,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 3, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 6.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
             { name: "Major Threat", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -104,7 +104,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Crit After Block", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -129,7 +129,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Perfect Block", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -153,7 +153,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Hasty Regen", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -176,7 +176,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Bow Stun", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -201,7 +201,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 7.5, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 6.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
             { name: "Block Strength", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -226,7 +226,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Poison Coating", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -251,7 +251,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Explosive Stun", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -275,7 +275,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Charged Shot Combo", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -299,7 +299,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 4, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Ranged Cut", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -323,7 +323,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Poison Damage", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -346,7 +346,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Overbearing", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -371,7 +371,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 2.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 1.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             { name: "Cutman", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -395,7 +395,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Corrosion", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -419,7 +419,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 7.5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 6.25, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
             { name: "Block Stun", description: "", amount: 0, unit: undefined },
         ],
     },
@@ -438,7 +438,7 @@ export const Legs: IArmour[] = [
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 10, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
-            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 3.75, unit: "%" },
+            { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             { name: "Sizzle Protection", description: "", amount: 0, unit: undefined },
         ],
     },
