@@ -7,6 +7,7 @@ import { IState } from "../../state/store";
 
 // utils
 import { combineEffects } from "../../utils/combineEffects";
+import DamageTable from "../damageTable";
 
 // styles
 import "./index.css";
@@ -42,6 +43,8 @@ const Effects = () => {
                     </div>
                 );
             })}
+
+            <DamageTable effects={combinedEffects} />
         </div>
     );
 };

@@ -261,8 +261,8 @@ export const Trinkets: ITrinket[] = [
                 unit: undefined,
             },
             {
-                name: "Damage resist",
-                description: "Reduces damage resistance by 35%.",
+                name: "Resistance",
+                description: "Reduces incoming damage",
                 amount: -35,
                 unit: "%",
             },
@@ -274,8 +274,8 @@ export const Trinkets: ITrinket[] = [
         image: "images/trinkets/badge.webp",
         effects: [
             {
-                name: "Damage resist",
-                description: "Reduces damage taken by 25%.",
+                name: "Resistance",
+                description: "Reduces incoming damage",
                 amount: 25,
                 unit: "%",
             },
