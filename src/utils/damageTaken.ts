@@ -22,5 +22,5 @@ export const damageTaken = (
         damageTaken = minDamage;
     }
 
-    return damageTaken;
+    return Math.round(damageTaken);
 };

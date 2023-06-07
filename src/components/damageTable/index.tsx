@@ -33,7 +33,7 @@ const DamageTable = (props: IProps) => {
 
     return (
         <div className="damageTable">
-            <h2>Damage taken:</h2>
+            <h2>Estimated damage taken:</h2>
 
             <table>
                 <tbody>

@@ -63,5 +63,16 @@ export const combineEffects = ({ mainHand, offhand, trinket, head, body, legs }:
         addEffect(head.setEffect);
     }
 
+    // add sleek effect
+    if (head) {
+        addEffect(head.sleekEffect);
+    }
+    if (body) {
+        addEffect(body.sleekEffect);
+    }
+    if (legs) {
+        addEffect(legs.sleekEffect);
+    }
+
     return effects;
 };

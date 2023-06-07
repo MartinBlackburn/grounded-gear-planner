@@ -7,6 +7,7 @@ import { IState } from "../../state/store";
 
 // utils
 import { combineEffects } from "../../utils/combineEffects";
+import { roundToTwoDecimalPlaces } from "../../utils/roundNumber";
 import DamageTable from "../damageTable";
 
 // styles
@@ -36,7 +37,7 @@ const Effects = () => {
                 return (
                     <div className="effect" key={index}>
                         <div className="effect__name">
-                            {effect.name}: {effect.amount !== 0 ? effect.amount : undefined}
+                            {effect.name}: {effect.amount !== 0 ? roundToTwoDecimalPlaces(effect.amount) : undefined}
                             {effect.unit}
                         </div>
                         <div>{effect.description}</div>

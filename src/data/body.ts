@@ -216,7 +216,7 @@ export const Body: IArmour[] = [
         image: "images/body/ladybugChestplate.png",
         sleekEffect: {
             name: "Increased healing",
-            description: "Increases the amount of health received from any healing options by 12%.",
+            description: "Increases the amount of health received from any healing options",
             amount: 12,
             unit: "%",
         },
