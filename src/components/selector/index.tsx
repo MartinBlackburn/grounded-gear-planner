@@ -102,7 +102,8 @@ const Selector = () => {
                             setSearchTerm("");
                         }}
                     >
-                        Nothing
+                        <img src="images/nothing.png" alt="nothing" />
+                        <span>Nothing</span>
                     </div>
 
                     {items.map((item, index) => (
@@ -114,7 +115,9 @@ const Selector = () => {
                                 setSearchTerm("");
                             }}
                         >
-                            {item.name}
+                            <img src={item.image} alt={item.name} />
+
+                            <span>{item.name}</span>
                         </div>
                     ))}
                 </div>

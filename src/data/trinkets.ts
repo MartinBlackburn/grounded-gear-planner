@@ -93,7 +93,7 @@ export const Trinkets: ITrinket[] = [
     {
         name: "Insulating larva spike",
         description: "A larva spike that seems to absorb heat.",
-        image: "images/trinkets/insultingLarvaSpike.webp",
+        image: "images/trinkets/insulatingLarvaSpike.webp",
         effects: [
             {
                 name: "Sizzle protection",

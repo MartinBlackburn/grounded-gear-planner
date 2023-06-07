@@ -98,7 +98,7 @@ export const Legs: IArmour[] = [
     {
         name: "Black Ant Legplates",
         description: "Sleek black set of knee guards crafted from black ant parts.",
-        image: "images/legs/blackAntLegsplates.png",
+        image: "images/legs/blackAntLegplates.png",
         sleekEffect: {
             name: "Crit hyperstamina",
             description: "Critical hits have a 50% chance to increase stamina regen by 20% for 20 seconds.",
@@ -419,7 +419,7 @@ export const Legs: IArmour[] = [
         name: "Assassin's Greaves",
         description:
             "A pair of greaves built for speed and striking. Crafted from mantis chunks and a mantis claw of a fallen assassin.",
-        image: "images/legs/assassin'sGreaves.png",
+        image: "images/legs/assassinsGreaves.png",
         sleekEffect: {
             name: "Crit stun",
             description: "Critical hits have a 30% chance to deal 25 stun.",

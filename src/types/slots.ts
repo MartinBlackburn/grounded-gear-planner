@@ -5,4 +5,5 @@ export enum Slot {
     HEAD = "Head",
     BODY = "Body",
     LEGS = "Legs",
+    ALL = "All",
 }

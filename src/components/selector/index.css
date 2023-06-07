@@ -61,7 +61,14 @@
 }
 
 .selector__item {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 
     cursor: pointer;
+}
+
+.selector img {
+    max-width: 30px;
+    margin-right: 10px;
 }

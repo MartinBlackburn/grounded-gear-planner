@@ -417,7 +417,7 @@ export const Body: IArmour[] = [
         name: "Assassin's Chestplate",
         description:
             "Chest armor built for speed and striking. Crafted from mantis chunks and a mantis claw of a fallen assassin.",
-        image: "images/body/assassin'sChestplate.png",
+        image: "images/body/assassinsChestplate.png",
         sleekEffect: {
             name: "Crit stun",
             description: "Critical hits have a 30% chance to deal 25 stun.",

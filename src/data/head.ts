@@ -419,7 +419,7 @@ export const Head: IArmour[] = [
         name: "Assassin's Mask",
         description:
             "A stunning mask built for speed and striking. Crafted from mantis chunks and a mantis head of a fallen assassin.",
-        image: "images/head/assassin'sMask.png",
+        image: "images/head/assassinsMask.png",
         sleekEffect: {
             name: "Crit stun",
             description: "Critical hits have a 30% chance to deal 25 stun.",

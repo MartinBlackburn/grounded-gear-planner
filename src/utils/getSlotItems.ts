@@ -29,6 +29,10 @@ export const getSlotItems = (slot: Slot): GearTypes[] => {
 
         case Slot.LEGS:
             return Legs;
+
+        case Slot.ALL:
+            return [...MainHand, ...Offhand, ...Trinkets, ...Head, ...Body, ...Legs];
+
         default:
             return [];
     }
