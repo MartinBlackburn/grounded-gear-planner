@@ -75,7 +75,7 @@ export const Legs: IArmour[] = [
     {
         name: "Acorn Legplates",
         description: "Chunky leg protection crafted from shards of acorn that insects find delicious.",
-        image: "images/legs/acornLegplates.png",
+        image: "images/legs/acornLegPlates.png",
         sleekEffect: { name: "Max health", description: "Increases max health by 10.", amount: 10, unit: undefined },
         setEffect: {
             name: "Uncrackable",

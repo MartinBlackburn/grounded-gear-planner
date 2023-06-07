@@ -192,7 +192,7 @@ export const Trinkets: ITrinket[] = [
     {
         name: "Shield solidifier",
         description: "An impossibly strong layer of fiber that can reinforce a shield to be nearly unbreakable.",
-        image: "images/trinkets/shieldsolidifier.webp",
+        image: "images/trinkets/shieldSolidifier.webp",
         effects: [
             {
                 name: "Block strength",
