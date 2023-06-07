@@ -5,7 +5,7 @@ export const Shields: IOffhand[] = [
     {
         name: "Fire ant shield",
         description: "An exotic shield made of fire ant parts.",
-        image: "images/offhand/fireAntShield.webp",
+        image: "images/offHand/fireAntShield.webp",
         effects: [
             {
                 name: "Block strength",
@@ -25,7 +25,7 @@ export const Shields: IOffhand[] = [
     {
         name: "Ladybird shield",
         description: "A sleek and stylish shield crafted from the jet black shell of a ladybird.",
-        image: "images/offhand/ladybirdShield.webp",
+        image: "images/offHand/ladybirdShield.webp",
         effects: [
             {
                 name: "Block strength",
@@ -45,7 +45,7 @@ export const Shields: IOffhand[] = [
     {
         name: "Black ant shield",
         description: "A sturdy shield made made of black and red ant parts.",
-        image: "images/offhand/blackAntShield.webp",
+        image: "images/offHand/blackAntShield.webp",
         effects: [
             {
                 name: "Block strength",
@@ -58,7 +58,7 @@ export const Shields: IOffhand[] = [
     {
         name: "Weevil shield",
         description: "Hopefully this shell will defend you better than the weevil it came from.",
-        image: "images/offhand/weevilShield.webp",
+        image: "images/offHand/weevilShield.webp",
         effects: [
             {
                 name: "Block strength",
