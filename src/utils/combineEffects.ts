@@ -14,23 +14,54 @@ interface IItems {
     legs: IArmour | null;
 }
 
-export const combineEffects = ({ mainHand, offhand, trinket, head, body, legs }: IItems): IEffect[] => {
-    const effects: IEffect[] = [];
+export interface IEffectsCombined {
+    effects: IEffect[];
+    sleekEffects: IEffect[];
+    setEffect?: IEffect;
+}
+
+export const combineEffects = ({ mainHand, offhand, trinket, head, body, legs }: IItems): IEffectsCombined => {
+    const combinedEffects: IEffectsCombined = {
+        effects: [],
+        sleekEffects: [],
+        setEffect: undefined,
+    };
+
+    const addSleekEffect = (effectToAdd: IEffect) => {
+        const existingEffect = combinedEffects.sleekEffects.findIndex((effect) => {
+            return effectToAdd.name === effect.name;
+        });
+
+        const clonedEffectToAdd = structuredClone(effectToAdd);
+
+        clonedEffectToAdd.isSleek = true;
+
+        if (existingEffect > -1) {
+            const clonedOldEffect = structuredClone(combinedEffects.sleekEffects[existingEffect]);
+
+            const newAmount = clonedOldEffect.amount + clonedEffectToAdd.amount;
+
+            combinedEffects.sleekEffects[existingEffect].amount = newAmount;
+        } else {
+            combinedEffects.sleekEffects.push(clonedEffectToAdd);
+        }
+    };
 
     const addEffect = (effectToAdd: IEffect) => {
-        const existingEffect = effects.findIndex((effect) => {
+        const existingEffect = combinedEffects.effects.findIndex((effect) => {
             return effectToAdd.name === effect.name;
         });
 
         const clonedEffectToAdd = structuredClone(effectToAdd);
 
         if (existingEffect > -1) {
-            const clonedOldEffect = structuredClone(effects[existingEffect]);
+            let clonedOldEffect = structuredClone(combinedEffects.effects[existingEffect]);
+
             const newAmount = clonedOldEffect.amount + clonedEffectToAdd.amount;
 
-            effects[existingEffect].amount = newAmount;
+            combinedEffects.effects[existingEffect].amount = newAmount;
         } else {
-            effects.push(clonedEffectToAdd);
+            combinedEffects.effects.push(clonedEffectToAdd);
         }
     };
 
@@ -58,21 +89,21 @@ export const combineEffects = ({ mainHand, offhand, trinket, head, body, legs }:
         addEffect(effect);
     });
 
-    // add set effect if set all the same type
-    if (head && head?.setEffect.name === body?.setEffect.name && body?.setEffect.name === legs?.setEffect.name) {
-        addEffect(head.setEffect);
-    }
-
     // add sleek effect
     if (head) {
-        addEffect(head.sleekEffect);
+        addSleekEffect(head.sleekEffect);
     }
     if (body) {
-        addEffect(body.sleekEffect);
+        addSleekEffect(body.sleekEffect);
     }
     if (legs) {
-        addEffect(legs.sleekEffect);
+        addSleekEffect(legs.sleekEffect);
     }
 
-    return effects;
+    // add set bonus
+    if (head && head.setEffect.name === body?.setEffect.name && head.setEffect.name === legs?.setEffect.name) {
+        combinedEffects.setEffect = structuredClone(head.setEffect);
+    }
+
+    return combinedEffects;
 };

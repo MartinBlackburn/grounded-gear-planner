@@ -2,7 +2,7 @@
 import React from "react";
 
 // types
-import { IEffect } from "../../types/effect";
+import { IEffectsCombined } from "../../utils/combineEffects";
 
 // utils
 import { damageTaken } from "../../utils/damageTaken";
@@ -11,11 +11,11 @@ import { damageTaken } from "../../utils/damageTaken";
 import "./index.css";
 
 interface IProps {
-    effects: IEffect[];
+    combinedEffects: IEffectsCombined;
 }
 
 const DamageTable = (props: IProps) => {
-    const resistance = props.effects.reduce((acc, effect) => {
+    let resistance = props.combinedEffects.effects.reduce((acc, effect) => {
         if (effect.name === "Resistance") {
             return acc + effect.amount;
         }
@@ -23,13 +23,29 @@ const DamageTable = (props: IProps) => {
         return acc;
     }, 0);
 
-    const defense = props.effects.reduce((acc, effect) => {
+    resistance = props.combinedEffects.sleekEffects.reduce((acc, effect) => {
+        if (effect.name === "Resistance") {
+            return acc + effect.amount;
+        }
+
+        return acc;
+    }, resistance);
+
+    let defense = props.combinedEffects.effects.reduce((acc, effect) => {
         if (effect.name === "Defense") {
             return acc + effect.amount;
         }
 
         return acc;
     }, 0);
+
+    defense = props.combinedEffects.sleekEffects.reduce((acc, effect) => {
+        if (effect.name === "Defense") {
+            return acc + effect.amount;
+        }
+
+        return acc;
+    }, defense);
 
     return (
         <div className="damageTable">

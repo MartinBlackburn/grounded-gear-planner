@@ -4,6 +4,7 @@ import React from "react";
 // state
 import { useSelector } from "react-redux";
 import { IState } from "../../state/store";
+import { IEffect } from "../../types/effect";
 
 // utils
 import { combineEffects } from "../../utils/combineEffects";
@@ -33,7 +34,7 @@ const Effects = () => {
 
     return (
         <div className="effects">
-            {combinedEffects.map((effect, index) => {
+            {combinedEffects.effects.map((effect, index) => {
                 return (
                     <div className="effect" key={index}>
                         <div className="effect__name">
@@ -45,7 +46,41 @@ const Effects = () => {
                 );
             })}
 
-            <DamageTable effects={combinedEffects} />
+            {combinedEffects.sleekEffects.map((effect, index) => {
+                return (
+                    <React.Fragment>
+                        {index === 0 ? <h2>Sleek bonus:</h2> : ""}
+
+                        <div className="effect effect--isSleek" key={index}>
+                            <div className="effect__name">
+                                {effect.name}:{" "}
+                                {effect.amount !== 0 ? roundToTwoDecimalPlaces(effect.amount) : undefined}
+                                {effect.unit}
+                            </div>
+                            <div>{effect.description}</div>
+                        </div>
+                    </React.Fragment>
+                );
+            })}
+
+            {combinedEffects.setEffect && (
+                <React.Fragment>
+                    <h2>Set bonus:</h2>
+
+                    <div className="effect effect--isSet">
+                        <div className="effect__name">
+                            {combinedEffects.setEffect.name}:{" "}
+                            {combinedEffects.setEffect.amount !== 0
+                                ? roundToTwoDecimalPlaces(combinedEffects.setEffect.amount)
+                                : undefined}
+                            {combinedEffects.setEffect.unit}
+                        </div>
+                        <div>{combinedEffects.setEffect.description}</div>
+                    </div>
+                </React.Fragment>
+            )}
+
+            <DamageTable combinedEffects={combinedEffects} />
         </div>
     );
 };

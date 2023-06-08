@@ -3,4 +3,5 @@ export interface IEffect {
     description: string;
     amount: number;
     unit: "%" | undefined;
+    isSleek?: boolean;
 }
