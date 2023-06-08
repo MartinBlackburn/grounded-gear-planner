@@ -12,7 +12,7 @@ export const Body: IArmour[] = [
             amount: 0.35,
             unit: undefined,
         },
-        setEffect: { name: "Moist", description: "Reduces thirst drain rate by 25%.", amount: 25, unit: "%" },
+        setEffect: { name: "Moist", description: "Reduces thirst drain rate.", amount: 25, unit: "%" },
         effects: [
             { name: "Defense", description: "Reduces incoming damage", amount: 9, unit: undefined },
             { name: "Resistance", description: "Reduces incoming damage", amount: 5, unit: "%" },
@@ -26,13 +26,13 @@ export const Body: IArmour[] = [
         image: "images/body/grubVest.png",
         sleekEffect: {
             name: "Hyperstamina",
-            description: "Increases stamina regeneration rate by 20%.",
+            description: "Increases stamina regeneration rate.",
             amount: 20,
             unit: "%",
         },
         setEffect: {
             name: "Optimized offense",
-            description: "Reduces the time it takes for stamina to regenerate by 10%.",
+            description: "Reduces the time it takes for stamina to regenerate.",
             amount: 10,
             unit: "%",
         },
@@ -49,7 +49,7 @@ export const Body: IArmour[] = [
         image: "images/body/redAntArmGuards.png",
         sleekEffect: {
             name: "Grass harvest speed",
-            description: "Increases harvesting speed of grass by 25%.",
+            description: "Increases harvesting speed of grass.",
             amount: 25,
             unit: "%",
         },
@@ -66,7 +66,7 @@ export const Body: IArmour[] = [
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 5, unit: "%" },
             {
                 name: "Hauling strength",
-                description: "Increases the amount of Grass Planks and Weed Stems that can be carried at once by 3.",
+                description: "Increases the amount of Grass Planks and Weed Stems that can be carried at once.",
                 amount: 3,
                 unit: undefined,
             },
@@ -76,10 +76,10 @@ export const Body: IArmour[] = [
         name: "Acorn Chestplate",
         description: "Chunky torso protection crafted from acorn bits that insects find delicious.",
         image: "images/body/acornChestplate.png",
-        sleekEffect: { name: "Max health", description: "Increases max health by 10.", amount: 10, unit: undefined },
+        sleekEffect: { name: "Max health", description: "Increases max health.", amount: 10, unit: undefined },
         setEffect: {
             name: "Uncrackable",
-            description: "Increases stun gauge when blocking attacks by 15.",
+            description: "Increases stun gauge when blocking attacks.",
             amount: 15,
             unit: undefined,
         },
@@ -89,7 +89,7 @@ export const Body: IArmour[] = [
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
             {
                 name: "Major threat",
-                description: "Increases creatures favorability of the player over other sources of aggression by 10%.",
+                description: "Increases creatures favorability of the player over other sources of aggression.",
                 amount: 10,
                 unit: "%",
             },
@@ -166,7 +166,7 @@ export const Body: IArmour[] = [
         },
         setEffect: {
             name: "Hunter's prowess",
-            description: "Increases stamina regeneration rate by 25%.",
+            description: "Increases stamina regeneration rate.",
             amount: 25,
             unit: "%",
         },
@@ -176,9 +176,9 @@ export const Body: IArmour[] = [
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             {
                 name: "Hasty regen",
-                description: "Lower exhaustion when running out of stamina by 5%.",
-                amount: 0,
-                unit: undefined,
+                description: "Lower exhaustion when running out of stamina.",
+                amount: 5,
+                unit: "%",
             },
         ],
     },
@@ -396,7 +396,7 @@ export const Body: IArmour[] = [
         },
         setEffect: {
             name: "Stunning charger",
-            description: "Increases the stun of charged attacks by 25.",
+            description: "Increases the stun of charged attacks.",
             amount: 25,
             unit: undefined,
         },
@@ -450,7 +450,7 @@ export const Body: IArmour[] = [
         image: "images/body/fireAntChestplate.png",
         sleekEffect: {
             name: "Acid damage",
-            description: "Increases damage of player-dealt acid-based attacks by 10%.",
+            description: "Increases damage of player-dealt acid-based attacks.",
             amount: 10,
             unit: "%",
         },
@@ -480,14 +480,13 @@ export const Body: IArmour[] = [
         image: "images/body/rolyPolyBreastplate.png",
         sleekEffect: {
             name: "Block strength",
-            description:
-                "Increases the block gauge by 50, allowing the player to take more damage before being stunned.",
+            description: "Increases the block gauge.",
             amount: 50,
             unit: undefined,
         },
         setEffect: {
             name: "Taunting Gaze",
-            description: "Increases creatures favorability of the player over other sources of aggression by 50%.",
+            description: "Increases creatures favorability of the player over other sources of aggression.",
             amount: 50,
             unit: "%",
         },
@@ -497,7 +496,7 @@ export const Body: IArmour[] = [
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 25, unit: "%" },
             {
                 name: "Block stun",
-                description: "Increases enemy stun by 3 when blocking attacks.",
+                description: "Increases enemy stun when blocking attacks.",
                 amount: 3,
                 unit: undefined,
             },
@@ -507,7 +506,7 @@ export const Body: IArmour[] = [
         name: "Antlion Poncho",
         description: "Chest armor made of antlion parts.",
         image: "images/body/antlionPoncho.png",
-        sleekEffect: { name: "Thirst rate", description: "Lowers thirst drain by 5%.", amount: 5, unit: "%" },
+        sleekEffect: { name: "Thirst rate", description: "Lowers thirst drain.", amount: 5, unit: "%" },
         setEffect: {
             name: "Quickdraw",
             description:
@@ -521,7 +520,7 @@ export const Body: IArmour[] = [
             { name: "Stamina usage", description: "Increases the amount of stamina used", amount: 15, unit: "%" },
             {
                 name: "Sizzle protection",
-                description: "Increases sizzle resistance by 75%.",
+                description: "Increases sizzle resistance.",
                 amount: 75,
                 unit: "%",
             },
