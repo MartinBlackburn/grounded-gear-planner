@@ -4,6 +4,7 @@ import { IMainHand } from "../../types/mainHand";
 // tools
 import { Axes } from "./axes";
 import { Bows } from "./bows";
+import { Clubs } from "./clubs";
 import { Crossbows } from "./crossbows";
 import { Daggers } from "./daggers";
 import { Hammers } from "./hammers";
@@ -17,6 +18,7 @@ import { Swords } from "./swords";
 export const MainHand: IMainHand[] = [
     ...Axes,
     ...Bows,
+    ...Clubs,
     ...Crossbows,
     ...Daggers,
     ...Hammers,
