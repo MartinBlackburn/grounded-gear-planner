@@ -11,6 +11,7 @@ import trinket from "./trinket";
 import head from "./head";
 import body from "./body";
 import legs from "./legs";
+import mutations from "./mutations";
 import selectedSlot from "./selectedSlot";
 
 export const rootReducer = combineReducers({
@@ -20,6 +21,7 @@ export const rootReducer = combineReducers({
     head: head,
     body: body,
     legs: legs,
+    mutations: mutations,
     selectedSlot: selectedSlot,
 });
 

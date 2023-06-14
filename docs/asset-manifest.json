@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/grounded-gear-planner/static/css/main.2a2c596a.css",
-    "main.js": "/grounded-gear-planner/static/js/main.15d8ce45.js",
+    "main.css": "/grounded-gear-planner/static/css/main.7742febf.css",
+    "main.js": "/grounded-gear-planner/static/js/main.084ddc0f.js",
     "static/media/hoops.png": "/grounded-gear-planner/static/media/hoops.a8fa4cfa4932fc3d8b3b.png",
     "index.html": "/grounded-gear-planner/index.html",
-    "main.2a2c596a.css.map": "/grounded-gear-planner/static/css/main.2a2c596a.css.map",
-    "main.15d8ce45.js.map": "/grounded-gear-planner/static/js/main.15d8ce45.js.map"
+    "main.7742febf.css.map": "/grounded-gear-planner/static/css/main.7742febf.css.map",
+    "main.084ddc0f.js.map": "/grounded-gear-planner/static/js/main.084ddc0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a2c596a.css",
-    "static/js/main.15d8ce45.js"
+    "static/css/main.7742febf.css",
+    "static/js/main.084ddc0f.js"
   ]
 }

@@ -6,6 +6,7 @@ import { Slot as SlotType } from "../../types/slots";
 import { IArmour } from "../../types/armour";
 import { IMainHand } from "../../types/mainHand";
 import { ITrinket } from "../../types/trinket";
+import { IMutation } from "../../types/mutation";
 
 // styles
 import "./index.css";
@@ -13,7 +14,7 @@ import "./index.css";
 interface IProps {
     type: SlotType;
     onClick: () => void;
-    item?: ITrinket | IMainHand | IArmour | null;
+    item?: ITrinket | IMainHand | IArmour | IMutation | null;
 }
 
 const Slot = (props: IProps) => {

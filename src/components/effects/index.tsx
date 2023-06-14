@@ -23,6 +23,8 @@ const Effects = () => {
     const selectedBody = useSelector((state: IState) => state.body);
     const selectedLegs = useSelector((state: IState) => state.legs);
 
+    const selectedMutations = useSelector((state: IState) => state.mutations);
+
     const combinedEffects = combineEffects({
         mainHand: selectedMainHand,
         offhand: selectedOffhand,
@@ -30,6 +32,7 @@ const Effects = () => {
         head: selectedHead,
         body: selectedBody,
         legs: selectedLegs,
+        mutations: selectedMutations,
     });
 
     return (
@@ -48,10 +51,10 @@ const Effects = () => {
 
             {combinedEffects.sleekEffects.map((effect, index) => {
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={`sleek-${index}`}>
                         {index === 0 ? <h2>Sleek bonus:</h2> : ""}
 
-                        <div className="effect effect--isSleek" key={index}>
+                        <div className="effect effect--isSleek">
                             <div className="effect__name">
                                 {effect.name}:{" "}
                                 {effect.amount !== 0 ? roundToTwoDecimalPlaces(effect.amount) : undefined}
@@ -79,6 +82,23 @@ const Effects = () => {
                     </div>
                 </React.Fragment>
             )}
+
+            {combinedEffects.mutationEffects.map((effect, index) => {
+                return (
+                    <React.Fragment key={`mutation-${index}`}>
+                        {index === 0 ? <h2>Mutation bonus:</h2> : ""}
+
+                        <div className="effect effect--mutations">
+                            <div className="effect__name">
+                                {effect.name}:{" "}
+                                {effect.amount !== 0 ? roundToTwoDecimalPlaces(effect.amount) : undefined}
+                                {effect.unit}
+                            </div>
+                            <div>{effect.description}</div>
+                        </div>
+                    </React.Fragment>
+                );
+            })}
 
             <DamageTable combinedEffects={combinedEffects} />
         </div>

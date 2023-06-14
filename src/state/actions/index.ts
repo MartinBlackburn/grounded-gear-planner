@@ -7,6 +7,7 @@ import { IMainHand } from "../../types/mainHand";
 import { IOffhand } from "../../types/offhand";
 import { ITrinket } from "../../types/trinket";
 import { IArmour } from "../../types/armour";
+import { IMutation } from "../../types/mutation";
 
 // action types
 export enum ActionTypes {
@@ -19,6 +20,7 @@ export enum ActionTypes {
     SELECT_HEAD = "SELECT_HEAD",
     SELECT_BODY = "SELECT_BODY",
     SELECT_LEGS = "SELECT_LEGS",
+    SELECT_MUTATION = "SELECT_MUTATION",
 }
 
 export interface IAction<ActionType, Payload> extends AnyAction {
@@ -80,5 +82,16 @@ export const Actions = {
     selectLegs: (item: IArmour): IAction<ActionTypes.SELECT_LEGS, IArmour> => ({
         type: ActionTypes.SELECT_LEGS,
         payload: item,
+    }),
+
+    selectMutation: (
+        item: IMutation,
+        index: number
+    ): IAction<ActionTypes.SELECT_MUTATION, { item: IMutation; index: number }> => ({
+        type: ActionTypes.SELECT_MUTATION,
+        payload: {
+            item,
+            index,
+        },
     }),
 };

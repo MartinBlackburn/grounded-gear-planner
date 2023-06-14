@@ -5,6 +5,7 @@ import { Trinkets } from "../data/trinkets";
 import { Head } from "../data/head";
 import { Body } from "../data/body";
 import { Legs } from "../data/legs";
+import { Mutations } from "../data/mutations";
 
 // types
 import { Slot } from "../types/slots";
@@ -30,8 +31,15 @@ export const getSlotItems = (slot: Slot): GearTypes[] => {
         case Slot.LEGS:
             return Legs;
 
+        case Slot.MUTATION_1:
+        case Slot.MUTATION_2:
+        case Slot.MUTATION_3:
+        case Slot.MUTATION_4:
+        case Slot.MUTATION_5:
+            return Mutations;
+
         case Slot.ALL:
-            return [...MainHand, ...Offhand, ...Trinkets, ...Head, ...Body, ...Legs];
+            return [...MainHand, ...Offhand, ...Trinkets, ...Head, ...Body, ...Legs, ...Mutations];
 
         default:
             return [];

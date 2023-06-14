@@ -15,6 +15,7 @@ import { ITrinket } from "../../types/trinket";
 import { IMainHand } from "../../types/mainHand";
 import { IOffhand } from "../../types/offhand";
 import { IArmour } from "../../types/armour";
+import { IMutation } from "../../types/mutation";
 
 // styles
 import "./index.css";
@@ -68,6 +69,26 @@ const Selector = () => {
 
         if (selectedSlot === SlotType.LEGS) {
             dispatch(Actions.selectLegs(item as IArmour));
+        }
+
+        if (selectedSlot === SlotType.MUTATION_1) {
+            dispatch(Actions.selectMutation(item as IMutation, 0));
+        }
+
+        if (selectedSlot === SlotType.MUTATION_2) {
+            dispatch(Actions.selectMutation(item as IMutation, 1));
+        }
+
+        if (selectedSlot === SlotType.MUTATION_3) {
+            dispatch(Actions.selectMutation(item as IMutation, 2));
+        }
+
+        if (selectedSlot === SlotType.MUTATION_4) {
+            dispatch(Actions.selectMutation(item as IMutation, 3));
+        }
+
+        if (selectedSlot === SlotType.MUTATION_5) {
+            dispatch(Actions.selectMutation(item as IMutation, 4));
         }
 
         dispatch(Actions.closeSelector());

@@ -1,16 +1,25 @@
 .doll {
     display: flex;
-    flex-direction: column;
     align-content: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
 
-    width: 442px;
+    width: 530px;
     height: 692px;
+    margin-right: 20px;
 
     background-image: url("./hoops.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top right;
+    background-position: top center;
+}
+
+.doll__equipment {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
 }
