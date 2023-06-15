@@ -22,6 +22,7 @@ import "./index.css";
 
 const Selector = () => {
     const selectedSlot = useSelector((state: IState) => state.selectedSlot);
+    const selectedMutations = useSelector((state: IState) => state.mutations);
     const dispatch = useDispatch();
 
     const [searchTerm, setSearchTerm] = React.useState("");
@@ -45,6 +46,29 @@ const Selector = () => {
     items = items.filter((item) => {
         return item.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
+
+    // remove existing mutations when some are selected
+    if (
+        [
+            SlotType.MUTATION_1,
+            SlotType.MUTATION_2,
+            SlotType.MUTATION_3,
+            SlotType.MUTATION_4,
+            SlotType.MUTATION_5,
+        ].includes(selectedSlot)
+    ) {
+        for (const mutationKey in selectedMutations) {
+            if (selectedMutations[mutationKey as unknown as number] !== null) {
+                const mutation = selectedMutations[mutationKey as unknown as number];
+
+                if (mutation) {
+                    items = items.filter((item) => {
+                        return !item.name.toLowerCase().includes(mutation.name.toLowerCase());
+                    });
+                }
+            }
+        }
+    }
 
     const onClick = (item: IMainHand | ITrinket | IOffhand | null) => {
         if (selectedSlot === SlotType.TRINKET) {
