@@ -34,7 +34,7 @@ export const Clubs: IMainHand[] = [
     {
         name: "Fire ant club",
         description: "Exceptionally deadly club crafted from fire ant parts.",
-        image: "images/mainHand/fireAnyClub.webp",
+        image: "images/mainHand/fireAntClub.webp",
         damage: [40, 80, 120],
         stun: [20],
         twoHanded: true,
